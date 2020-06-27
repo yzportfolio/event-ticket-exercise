@@ -4,23 +4,62 @@ pragma solidity ^0.5.0;
         The EventTicketsV2 contract keeps track of the details and ticket sales of multiple events.
      */
 contract EventTicketsV2 {
-
+         address public owner = msg.sender();
+         constructor public {
+         owner = msg.sender:
+         }
+         
     /*
         Define an public owner variable. Set it to the creator of the contract when it is initialized.
     */
-    uint   PRICE_TICKET = 100 wei;
+mapping (address ==> bool)public enrolled;
+address public owner =msg.sender;
+address payable[] public subscribers;
+uint   PRICE_TICKET = 100 wei;
 
     /*
         Create a variable to keep track of the event ID numbers.
     */
-    uint public idGenerator;
+   uint public idGenerator;
+   const idGenerator = artifacts.require(string);
+   await idGenerator = require(."exceptionHelpers.js").idGenerator;
 
+    /*
+        Create a public state variable called owner.
+        Use the appropriate keyword to create an associated getter function.
+        Use the appropriate keyword to allow ether transfers.
+     */
+   address public owner = msg.sender();
+   mapping (address ==> bool) public enrolled;
+   address payable[] public owners;
+   uint PRICE_TICKET = 100 wei;
+   
+    
+    /*
+        Create a struct called "Event".
+        The struct has 6 fields: description, website (URL), totalTickets, sales, buyers, and isOpen.
+        Choose the appropriate variable type for each field.
+        The "buyers" field should keep track of addresses and how many tickets each buyer purchases.
+    */
+
+    event LogEventAdded(description, website (URL), totalTickets, sales, buyers, isOpen);
+    event LogBuyTickets(description, website (URL), totalTickets, sales, buyers, isOpen);
+    event LogGetRefund(description, website (URL), totalTickets, sales, buyers, isOpen);
+    event LogEndSale(description, website (URL), totalTickets, sales, buyers, isOpen);
     /*
         Define an Event struct, similar to the V1 of this contract.
         The struct has 6 fields: description, website (URL), totalTickets, sales, buyers, and isOpen.
         Choose the appropriate variable type for each field.
         The "buyers" field should keep track of addresses and how many tickets each buyer purchases.
     */
+const eventTickets;
+ function(accounts){
+  async();
+    const instance = await (descriotion, website (URL), totalTickets, sales, buyers,isOpen);
+    await catchRevert;(instance.buyTickets(1, (web3.utils.toWei),'100', 'ether'),);
+    Event LogBuyTickets;
+    Event LogGetRefund;
+    Event LogEndSale;
 
     /*
         Create a mapping to keep track of the events.
@@ -36,7 +75,14 @@ contract EventTicketsV2 {
     /*
         Create a modifier that throws an error if the msg.sender is not the owner.
     */
-
+    function() external payable {
+      require(msg.sender == owner, "msg.sender should be owner");
+      for(uint i = subscibers.length; i > 0; i --){
+        subscrivers[i - 1].transfer(PRICE_TICKET);
+        revert();
+      }
+    }
+   
     /*
         Define a function called addEvent().
         This function takes 3 parameters, an event description, a URL, and a number of tickets.
@@ -50,6 +96,30 @@ contract EventTicketsV2 {
             - return the event's ID
     */
 
+const addEvent();
+ function(accounts) external payable{
+      require(msg.sender == owner, "msg.sender should be owner");
+      for(uint i = subscibers.length; i > 0; i --){
+        subscrivers[i - 1].transfer(PRICE_TICKET);
+        revert();
+      }
+  async();
+    const instance = await (descriotion, website (URL), totalTickets,);
+    await catchRevert;(instance.buyTickets(1, (web3.utils.toWei),'100', 'ether'),);
+    Event eventID;
+    Event LogBuyTickets;
+    Event LogGetRefund;
+    Event LogEndSale;
+
+  addEvent(descriotion, website (URL), totalTickets,);
+      Event isOpen;
+      (descriotion, website (URL), totalTickets,);
+      
+          require(balance[msg.sender] >= amount, "Insufficient funds");
+          balances[msg.sender] -= amount;
+          balances[eventId] += amount;
+          emit eventID(descriotion, website (URL), totalTickets,);
+        }
     /*
         Define a function called readEvent().
         This function takes one parameter, the event ID.
@@ -60,6 +130,10 @@ contract EventTicketsV2 {
             4. sales
             5. isOpen
     */
+    readEvent(address);
+        address owner = msg.sender(address);
+        Event readEvent;
+         (string memory description, string memory website, uint totalTickets, uint sales, bool isOpen,)=
 
     /*
         Define a function called buyTickets().
@@ -76,6 +150,15 @@ contract EventTicketsV2 {
             - emits the appropriate event
     */
 
+  buyTickets(uint, totalTicket);
+      Event isOpen;
+      (uint,totalTicket);
+
+   require(balance[msg.sender] >= amount, "Insufficient funds");
+          balances[msg.sender] -= amount;
+          balances[eventId] += amount;
+          emit eventID(uint, totalTickets,);
+        }
     /*
         Define a function called getRefund().
         This function allows users to request a refund for a specific event.
@@ -86,13 +169,27 @@ contract EventTicketsV2 {
             - send appropriate value to the refund requester
             - emit the appropriate event
     */
-
+  getRefund(string, eventID);
+    {
+          require(balance[msg.sender] >= amount, "Insufficient funds");
+          balances[msg.sender] -= amount;
+          balances[eventID] += amount;
+          items[eventID].buyer.transfer(getRefund);
+          emit getRefund(msg.sender, eventID ,amount);
+        }
     /*
         Define a function called getBuyerNumberTickets()
         This function takes one parameter, an event ID
         This function returns a uint, the number of tickets that the msg.sender has purchased.
     */
-
+    getBuyerNumberTickets(uint, eventID);
+    {
+          require(balance[msg.sender] >= amount, "Insufficient funds");
+          balances[msg.sender] -= amount;
+          balances[eventID] += amount;
+          items[eventID].buyer.transfer(getBuyerNumberTickets);
+          emit getBuyerNumberTickets(msg.sender, eventID ,totalTicket);
+        }
     /*
         Define a function called endSale()
         This function takes one parameter, the event ID
@@ -102,4 +199,12 @@ contract EventTicketsV2 {
             - transfer the balance from those event sales to the contract owner
             - emit the appropriate event
     */
+     endSale(eventID);
+    {
+          require(balance[msg.sender] >= amount, "Insufficient funds");
+          balances[msg.sender] -= amount;
+          balances[eventID] += amount;
+          items[eventID].buyer.transfer(endSale);
+          emit endSale(msg.sender,eventID,amount);
+        }
 }
